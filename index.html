@@ -1,208 +1,114 @@
 <!doctype html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Élara Dev — Portfolio</title>
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@200;300;400;500&display=swap"
-      rel="stylesheet"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jahniss Féli Dev — Portfolio</title>
 
-    <!-- Vite entry point (CSS + JS bundlés) -->
-    <script type="module" src="/src/main.js"></script>
-  </head>
-  <body>
-    <!-- Custom cursor -->
-    <div id="cursor"></div>
-    <div id="cursor-ring"></div>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@200;300;400;500&display=swap"
+    rel="stylesheet" />
+</head>
 
-    <!-- Background elements -->
-    <canvas id="stars-canvas"></canvas>
-    <div class="orb orb-1"></div>
-    <div class="orb orb-2"></div>
-    <div class="orb orb-3"></div>
+<body>
+  <!-- curseur -->
+  <div id="cursor"></div>
+  <div id="cursor-ring"></div>
 
-    <!-- ══════════════════════ NAV ══════════════════════ -->
+  <!-- Arrière plan-->
+  <canvas id="stars-canvas"></canvas>
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
 
-    <nav>
-      <div
-        class="max-w-7xl mx-auto px-8 md:px-12 flex items-center justify-between h-20"
-      >
-        <span
-          class="font-display text-xl font-semibold grad-text tracking-wide"
-        >
-          Élara.
-        </span>
+  <!-- NAV-->
 
-        <ul
-          class="hidden md:flex items-center gap-10 text-sm font-medium text-purple-200/70"
-        >
-          <li>
-            <a href="#about" class="hover:text-lilac-300 transition-colors"
-              >À propos</a
-            >
-          </li>
-          <li>
-            <a href="#skills" class="hover:text-lilac-300 transition-colors"
-              >Compétences</a
-            >
-          </li>
-          <li>
-            <a href="#projects" class="hover:text-lilac-300 transition-colors"
-              >Projets</a
-            >
-          </li>
-          <li>
-            <a href="#experience" class="hover:text-lilac-300 transition-colors"
-              >Parcours</a
-            >
-          </li>
-          <li>
-            <a href="#contact" class="hover:text-lilac-300 transition-colors"
-              >Contact</a
-            >
-          </li>
-        </ul>
+  <nav>
+    <div class="max-w-7xl mx-auto px-8 md:px-12 flex items-center justify-between h-20">
+      <span class="top font-display text-xl font-semibold grad-text tracking-wide">
+        Féli OB's.
+      </span>
 
-        <a href="#contact" class="btn-primary text-sm py-2.5 px-6 rounded-full">
-          Me contacter
-        </a>
-      </div>
-    </nav>
-    <!-- <nav>
-      <div
-        class="max-w-6xl mx-auto px-6 flex items-center justify-between h-16"
-      >
-        <span class="font-display text-xl font-semibold grad-text tracking-wide"
-          >Élara.</span
-        >
-        <ul
-          class="hidden md:flex items-center gap-8 text-sm text-purple-200/70"
-        >
-          <li>
-            <a href="#about" class="hover:text-lilac-300 transition-colors"
-              >À propos</a
-            >
-          </li>
-          <li>
-            <a href="#skills" class="hover:text-lilac-300 transition-colors"
-              >Compétences</a
-            >
-          </li>
-          <li>
-            <a href="#projects" class="hover:text-lilac-300 transition-colors"
-              >Projets</a
-            >
-          </li>
-          <li>
-            <a href="#experience" class="hover:text-lilac-300 transition-colors"
-              >Parcours</a
-            >
-          </li>
-          <li>
-            <a href="#contact" class="hover:text-lilac-300 transition-colors"
-              >Contact</a
-            >
-          </li>
-        </ul>
-        <a href="#contact" class="btn-primary text-sm py-2 px-5"
-          >Me contacter</a
-        >
-      </div>
-    </nav> -->
+      <ul class="hidden md:flex items-center gap-10 text-sm font-medium text-purple-200/70">
+        <li>
+          <a href="#about" class="hover:text-lilac-300 transition-colors">À propos</a>
+        </li>
 
-    <!--HERO -->
-    <section
-      id="hero" class="min-h-screen flex items-center justify-center px-6 pt-24 pb-12 relative z-10">
+        <li>
+          <a href="#skills" class="hover:text-lilac-300 transition-colors">Compétences</a>
+        </li>
 
-      <div class="max-w-6xl w-full grid md:grid-cols-2 gap-12 items-center">
-        <div class="space-y-7">
-          <div class="hero-tag" id="hero-tag">
-            <span
-              class="w-1.5 h-1.5 rounded-full bg-purple-400 animate-ping inline-block"
-            ></span>
-            Disponible pour des missions
-          </div>
+        <li>
+          <a href="#projects" class="hover:text-lilac-300 transition-colors">Projets</a>
+        </li>
 
-          <div class="space-y-3">
-            <p
-              class="text-purple-300/60 text-sm tracking-widest uppercase font-light"
-              id="hero-sub"
-            >
-              Développeuse Full-Stack & UI
-            </p>
-            <h1
-              class="font-display text-6xl md:text-7xl font-light leading-tight text-white"
-              id="hero-name"
-            >
-              Élara<br />
-              <em class="grad-text not-italic">Moreau</em>
-            </h1>
-          </div>
+        <li>
+          <a href="#experience" class="hover:text-lilac-300 transition-colors">Parcours</a>
+        </li>
 
-          <p
-            class="text-purple-200/60 text-base leading-relaxed max-w-sm"
-            id="hero-desc"
-          >
-            Je conçois des expériences web raffinées — du pixel parfait à
-            l'architecture backend robuste. Passionnée par la beauté du code et
-            du design.
+        <li>
+          <a href="#contact" class="hover:text-lilac-300 transition-colors">Contact</a>
+        </li>
+      </ul>
+
+      <a href="#contact" class="btn-primary text-sm py-2.5 px-6 rounded-full">
+        Me contacter
+      </a>
+    </div>
+  </nav>
+
+  <!--HERO -->
+
+  <section id="hero" class="min-h-screen flex items-center justify-center px-6 pt-24 pb-12 relative z-10">
+    <div class="hero max-w-6xl w-full grid md:grid-cols-2 gap-12 items-center">
+      <div class="space-y-7">
+        <div class="hero-tag" id="hero-tag">
+          <span class="w-1.5 h-1.5 rounded-full bg-purple-400 animate-ping inline-block"></span>
+          Disponible
+        </div>
+
+        <div class="space-y-3">
+          <p class="text-purple-300/60 text-sm tracking-widest uppercase font-light" id="hero-sub">
+            Développeuse Full-Stack & UI
           </p>
+          <h1 class="font-display text-6xl md:text-7xl font-light leading-tight text-white" id="hero-name">
+            Jahniss Félijo<br />
+            <em class="grad-text not-italic">OBENDA</em>
+          </h1>
+        </div>
 
-          <div class="flex flex-wrap items-center gap-6 pt-4" id="hero-cta">
-            <a
-              href="#projects"
-              class="btn-primary text-sm font-medium py-4 px-8 rounded-full flex items-center gap-3 transition-all hover:scale-105"
-            >
-              Voir mes projets
-              <svg
-                class="w-4 h-4"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2.5"
-                viewBox="0 0 24 24"
-              >
-                <path d="M5 12h14M12 5l7 7-7 7" />
-              </svg>
-            </a>
+        <p class="text-purple-200/60 text-base leading-relaxed max-w-sm" id="hero-desc">
+          Je conçois des expériences web raffinées — du pixel parfait à
+          l'architecture backend. Passionnée par la beauté du code et
+          du design.
+        </p>
 
-            <a
-              href="#"
-              class="glass text-sm font-medium py-4 px-8 rounded-full text-purple-200/90 hover:text-white transition-all border border-white/10"
-            >
-              Télécharger CV ↓
-            </a>
-          </div>
+        <div class="flex flex-wrap items-center gap-6 pt-4" id="hero-cta">
+          <a href="#projects"
+            class="btn-primary text-sm font-medium py-4 px-8 rounded-full flex items-center gap-3 transition-all hover:scale-105">
+            Voir mes projets
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </a>
 
-          <!-- <div class="flex flex-wrap gap-4" id="hero-cta">
-        <a href="#projects" class="bg-purple-600 hover:bg-purple-500 text-white px-8 py-3 rounded-full flex items-center gap-2 transition-all">
-          Voir mes projets
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <path d="M5 12h14M12 5l7 7-7 7" />
-          </svg>
-        </a>
-        <a href="#" class="glass px-8 py-3 rounded-full text-sm text-purple-200/80 hover:text-white transition-all border border-white/10">
-          Télécharger CV ↓
-        </a>
-      </div> -->
+          <a href="#"
+            class="glasses text-sm font-medium py-4 px-8 rounded-full text-purple-200/90 hover:text-white transition-all border border-white/10">
+            Télécharger CV ↓
+          </a>
+        </div>
 
-          <div class="flex items-center gap-5 pt-2" id="hero-social">
-            <a
-              href="#"
-              class="text-purple-400/50 hover:text-purple-300 transition-colors"
-            >
-              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                <path
-                  d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
-                />
-              </svg>
-            </a>
-            <a
+        <div class="flex items-center gap-5 pt-2" id="hero-social">
+          <a href="#" class="text-purple-400/50 hover:text-purple-300 transition-colors">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+            </svg>
+          </a>
+          <!-- <a
               href="#"
               class="text-purple-400/50 hover:text-purple-300 transition-colors"
             >
@@ -211,19 +117,16 @@
                   d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
                 />
               </svg>
-            </a>
-            <div class="w-px h-4 bg-purple-700/40 mx-1"></div>
-            <span class="text-purple-400/40 text-xs tracking-wide"
-              >PARIS, FRANCE</span
-            >
-          </div>
+            </a> -->
+          <div class="w-px h-4 bg-purple-700/40 mx-1"></div>
+          <span class="text-purple-400/40 text-xs tracking-wide">Brazzaville, Congo
+          </span>
         </div>
+      </div>
 
-        <div class="relative flex items-center justify-center h-125">
-          <div class="relative w-72 h-72">
-            <div
-              class="absolute inset-0 rounded-full animate-[spin_8s_linear_infinite]"
-              style="
+      <div class="relative flex items-center justify-center h-125">
+        <div class="relative w-72 h-72">
+          <div class="absolute inset-0 rounded-full animate-[spin_8s_linear_infinite]" style="
                 background: conic-gradient(
                   from 0deg,
                   #8855ff,
@@ -233,32 +136,20 @@
                   #8855ff
                 );
                 padding: 2px;
-              "
-            >
-              <div class="w-full h-full rounded-full bg-[#0a0712]"></div>
-            </div>
-            <div
-              class="absolute inset-2 rounded-full overflow-hidden glass flex items-center justify-center border border-white/10"
-            >
-              <svg
-                viewBox="0 0 120 120"
-                class="w-44 h-44 opacity-80"
-                fill="none"
-              >
-                <circle cx="60" cy="42" r="22" fill="rgba(191,166,255,.55)" />
-                <ellipse
-                  cx="60"
-                  cy="96"
-                  rx="36"
-                  ry="22"
-                  fill="rgba(191,166,255,.35)"
-                />
-              </svg>
-            </div>
+              ">
+            <div class="w-full h-full rounded-full bg-[#0a0712]"></div>
+          </div>
+          <div
+            class="absolute inset-2 rounded-full overflow-hidden glass flex items-center justify-center border border-white/10">
+            <svg viewBox="0 0 120 120" class="w-44 h-44 opacity-80" fill="none">
+              <circle cx="60" cy="42" r="22" fill="rgba(191,166,255,.55)" />
+              <ellipse cx="60" cy="96" rx="36" ry="22" fill="rgba(191,166,255,.35)" />
+            </svg>
+          </div>
 
-            <div
+          <!-- <div
               class="glass absolute -top-4 -left-12 px-4 py-3 flex items-center gap-3 animate-bounce shadow-2xl border border-white/10"
-            >
+             >
               <span class="text-lg">⚡</span>
               <div>
                 <p class="text-[10px] text-purple-200/50 uppercase">
@@ -266,26 +157,91 @@
                 </p>
                 <p class="text-sm font-bold text-white">5 ans+</p>
               </div>
-            </div>
+            </div> -->
 
-            <div
+          <!-- <div
               class="glass absolute bottom-4 -right-12 px-4 py-3 flex items-center gap-3 animate-bounce [animation-delay:1s] shadow-2xl border border-white/10"
-            >
+             >
               <span class="text-lg">✦</span>
               <div>
                 <p class="text-[10px] text-purple-200/50 uppercase">Projets</p>
                 <p class="text-sm font-bold text-white">38+</p>
               </div>
-            </div>
-          </div>
+            </div> -->
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <div class="divider my-4 relative z-10 max-w-5xl mx-auto"></div>
+  <div class="divider my-4 relative z-10 max-w-5xl mx-auto"></div>
 
-    <!-- ══════════════════════ ABOUT ══════════════════════ -->
-    <section id="about" class="py-24 px-6 relative z-10">
+  <!-- ABOUT -->
+  <section id="about" class="py-32 px-6 relative z-10">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 lg:gap-24 items-start">
+      <div class="reveal space-y-8">
+        <p class="text-[10px] tracking-[0.3em] my-6 uppercase text-purple-400/70 font-medium">
+          01 — À propos
+        </p>
+
+        <h2 class="text-propos font-display text-5xl md:text-6xl font-light leading-[1.1] text-white">
+          Coder avec <br />
+          <em class="grad-text not-italic">Volonté</em> & passion
+        </h2>
+
+        <div class="space-y-6 max-w-lg">
+          <p class="para-propos text-purple-200/60 leading-relaxed text-base">
+            Développeuse passionnée basée à Brazzaville, je fusionne l'ingénierie
+            logicielle et la sensibilité artistique pour créer des interfaces
+            modernes. Chaque projet est pour moi une opportunité de m'inspirer.
+
+          </p>
+
+        </div>
+
+        <div class="flex flex-wrap gap-3 pt-4">
+
+          </span
+            class="proj-tag text-[11px] px-4 py-1.5 border border-purple-500/30 rounded-full bg-purple-500/5 text-purple-200/80">UI/UX
+          Design</>
+
+          <span
+            class="proj-tag text-[11px] px-4 py-1.5 border border-purple-500/30 rounded-full bg-purple-500/5 text-purple-200/80">Performances
+            Web</span>
+        </div>
+      </div>
+
+      <div class="reveal grid grid-cols-2 gap-6">
+        <!-- <div class="glass p-8 space-y-3 rounded-3xl border border-white/5">
+            <p class="text-4xl font-display grad-text font-semibold">38+</p>
+            <p class="text-xs text-purple-300/50 uppercase tracking-wider">
+              Projets livrés avec soin
+            </p>
+          </div> -->
+
+        <div class="glass p-8 space-y-3 rounded-3xl border border-white/5">
+          <p class="text-4xl font-display grad-text font-semibold">3</p>
+          <p class="text-xs text-purple-300/50 uppercase tracking-wider">
+            Années d'expérience
+          </p>
+        </div>
+
+        <!-- <div class="glass p-8 space-y-3 rounded-3xl border border-white/5">
+            <p class="text-4xl font-display grad-text font-semibold">12</p>
+            <p class="text-xs text-purple-300/50 uppercase tracking-wider">
+              Clients satisfaits
+            </p>
+          </div> -->
+
+        <div class="glass p-8 space-y-3 col-span-2 rounded-3xl border border-white/5">
+          <p class="text-4xl font-display grad-text font-semibold">∞</p>
+          <p class="text-xs text-purple-300/50 uppercase tracking-wider">
+            Lignes de code écrites avec passion
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- <section id="about" class="py-24 px-6 relative z-10">
       <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-16 items-center">
         <div class="reveal space-y-6">
           <p class="text-xs tracking-widest uppercase text-lilac-400/70">
@@ -335,179 +291,152 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
-    <div class="divider my-2 relative z-10 max-w-5xl mx-auto"></div>
+  <div class="divider my-2 relative z-10 max-w-5xl mx-auto"></div>
 
-    <!-- ══════════════════════ SKILLS ══════════════════════ -->
-    <section id="skills" class="py-24 px-6 relative z-10">
-      <div class="max-w-5xl mx-auto">
-        <div class="reveal text-center mb-16 space-y-3">
-          <p class="text-xs tracking-widest uppercase text-lilac-400/70">
-            02 — Compétences
-          </p>
-          <h2 class="font-display text-5xl font-light">
-            Mon <em class="grad-text not-italic">arsenal</em> technique
-          </h2>
-        </div>
+  <!--SKILLS -->
+  <section id="skills" class="py-24 px-6 relative z-10">
+    <div class="max-w-5xl mx-auto">
+      <div class="reveal-one text-center mb-16 space-y-3">
+        <p class="text-xs tracking-widest uppercase text-lilac-400/70">
+          02 — Compétences
+        </p>
+        <h2 class="titles font-display text-5xl font-light">
+          Mon <em class="grad-text not-italic">arsenal</em> technique
+        </h2>
+      </div>
 
-        <div class="grid md:grid-cols-3 gap-6">
-          <div class="glass reveal p-7 space-y-5">
-            <div
-              class="w-10 h-10 rounded-xl flex items-center justify-center"
-              style="background: rgba(136, 85, 255, 0.2)"
-            >
-              <svg
-                class="w-5 h-5 text-lilac-300"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.5"
-                viewBox="0 0 24 24"
-              >
+      <div class="skills-box grid md:grid-cols-3 gap-6">
+        <div class="glassy reveal p-7 space-y-6">
+          <div class="marge">
+            <div class="w-10 h-10 rounded-xl flex items-center justify-center"
+              style="background: rgba(136, 85, 255, 0.2)">
+              <svg class="w-5 h-5 text-lilac-300" fill="none" stroke="currentColor" stroke-width="1.5"
+                viewBox="0 0 24 24">
                 <path
-                  d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                />
+                  d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
               </svg>
             </div>
+
             <h3 class="font-display text-xl text-purple-100">Frontend</h3>
             <div class="space-y-3">
               <div>
-                <div
-                  class="flex justify-between text-xs text-purple-300/60 mb-1"
-                >
-                  <span>React / Next.js</span><span>95%</span>
+                <div class="flex justify-between text-xs text-purple-300/60 mb-1">
+                  <span>React</span><span>35%</span>
                 </div>
                 <div class="skill-bar-bg">
-                  <div class="skill-bar-fill" data-w="95"></div>
+                  <div class="skill-bar-fill" data-w="35"></div>
                 </div>
               </div>
               <div>
-                <div
-                  class="flex justify-between text-xs text-purple-300/60 mb-1"
-                >
-                  <span>TypeScript</span><span>88%</span>
+                <div class="flex justify-between text-xs text-purple-300/60 mb-1">
+                  <span>HTML5</span><span>88%</span>
                 </div>
                 <div class="skill-bar-bg">
                   <div class="skill-bar-fill" data-w="88"></div>
                 </div>
               </div>
               <div>
-                <div
-                  class="flex justify-between text-xs text-purple-300/60 mb-1"
-                >
+                <div class="flex justify-between text-xs text-purple-300/60 mb-1">
+                  <span>CSS3</span><span>88%</span>
+                </div>
+                <div class="skill-bar-bg">
+                  <div class="skill-bar-fill" data-w="88"></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between text-xs text-purple-300/60 mb-1">
                   <span>Tailwind CSS</span><span>92%</span>
                 </div>
                 <div class="skill-bar-bg">
                   <div class="skill-bar-fill" data-w="92"></div>
                 </div>
               </div>
-              <div>
-                <div
-                  class="flex justify-between text-xs text-purple-300/60 mb-1"
-                >
-                  <span>Framer Motion</span><span>80%</span>
-                </div>
-                <div class="skill-bar-bg">
-                  <div class="skill-bar-fill" data-w="80"></div>
-                </div>
+              <!-- <div>
+                  <div
+                    class="flex justify-between text-xs text-purple-300/60 mb-1"
+                  >
+                    <span>Framer Motion</span><span>80%</span>
+                  </div>
+                  <div class="skill-bar-bg">
+                    <div class="skill-bar-fill" data-w="80"></div>
+                  </div>
+                </div> -->
+            </div>
+          </div>
+        </div>
+
+        <div class="glass reveal p-7 space-y-5">
+          <div class="w-10 h-10 rounded-xl flex items-center justify-center"
+            style="background: rgba(240, 168, 208, 0.15)">
+            <svg class="w-5 h-5 text-rose-300" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+              <path
+                d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2" />
+            </svg>
+          </div>
+
+          <h3 class="font-display text-xl text-purple-100">Backend</h3>
+          <div class="space-y-3">
+            <div>
+              <div class="flex justify-between text-xs text-purple-300/60 mb-1">
+                <span>PHP</span><span>50%</span>
+              </div>
+              <div class="skill-bar-bg">
+                <div class="skill-bar-fill" data-w="50"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between text-xs text-purple-300/60 mb-1">
+                <span>Laravel</span><span>25%</span>
+              </div>
+              <div class="skill-bar-bg">
+                <div class="skill-bar-fill" data-w="25"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between text-xs text-purple-300/60 mb-1">
+                <span>Mysql</span><span>65%</span>
+              </div>
+              <div class="skill-bar-bg">
+                <div class="skill-bar-fill" data-w="65"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between text-xs text-purple-300/60 mb-1">
+                <span>Postgree sql</span><span>30%</span>
+              </div>
+              <div class="skill-bar-bg">
+                <div class="skill-bar-fill" data-w="70"></div>
               </div>
             </div>
           </div>
+        </div>
 
-          <div class="glass reveal p-7 space-y-5">
-            <div
-              class="w-10 h-10 rounded-xl flex items-center justify-center"
-              style="background: rgba(240, 168, 208, 0.15)"
-            >
-              <svg
-                class="w-5 h-5 text-rose-300"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.5"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2"
-                />
-              </svg>
-            </div>
-            <h3 class="font-display text-xl text-purple-100">Backend</h3>
-            <div class="space-y-3">
-              <div>
-                <div
-                  class="flex justify-between text-xs text-purple-300/60 mb-1"
-                >
-                  <span>Node.js / Express</span><span>90%</span>
-                </div>
-                <div class="skill-bar-bg">
-                  <div class="skill-bar-fill" data-w="90"></div>
-                </div>
-              </div>
-              <div>
-                <div
-                  class="flex justify-between text-xs text-purple-300/60 mb-1"
-                >
-                  <span>PostgreSQL</span><span>82%</span>
-                </div>
-                <div class="skill-bar-bg">
-                  <div class="skill-bar-fill" data-w="82"></div>
-                </div>
-              </div>
-              <div>
-                <div
-                  class="flex justify-between text-xs text-purple-300/60 mb-1"
-                >
-                  <span>GraphQL</span><span>75%</span>
-                </div>
-                <div class="skill-bar-bg">
-                  <div class="skill-bar-fill" data-w="75"></div>
-                </div>
-              </div>
-              <div>
-                <div
-                  class="flex justify-between text-xs text-purple-300/60 mb-1"
-                >
-                  <span>Docker / CI-CD</span><span>70%</span>
-                </div>
-                <div class="skill-bar-bg">
-                  <div class="skill-bar-fill" data-w="70"></div>
-                </div>
-              </div>
-            </div>
+        <div class="glass reveal p-7 space-y-5">
+          <div class="w-10 h-10 rounded-xl flex items-center justify-center"
+            style="background: rgba(147, 197, 253, 0.12)">
+            <svg class="w-5 h-5 text-blue-300" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+              <path
+                d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+            </svg>
           </div>
 
-          <div class="glass reveal p-7 space-y-5">
-            <div
-              class="w-10 h-10 rounded-xl flex items-center justify-center"
-              style="background: rgba(147, 197, 253, 0.12)"
-            >
-              <svg
-                class="w-5 h-5 text-blue-300"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.5"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
-                />
-              </svg>
-            </div>
-            <h3 class="font-display text-xl text-purple-100">
-              Design & Outils
-            </h3>
-            <div class="space-y-3">
-              <div>
+          <h3 class="font-display text-xl text-purple-100">
+            Design & Outils
+          </h3>
+          <div class="space-y-3">
+            <!-- <div>
                 <div
                   class="flex justify-between text-xs text-purple-300/60 mb-1"
                 >
-                  <span>Figma</span><span>85%</span>
+                  <span>Git & github</span><span>35%</span>
                 </div>
                 <div class="skill-bar-bg">
-                  <div class="skill-bar-fill" data-w="85"></div>
+                  <div class="skill-bar-fill" data-w="35"></div>
                 </div>
-              </div>
-              <div>
+              </div> -->
+            <!-- <div>
                 <div
                   class="flex justify-between text-xs text-purple-300/60 mb-1"
                 >
@@ -516,8 +445,8 @@
                 <div class="skill-bar-bg">
                   <div class="skill-bar-fill" data-w="88"></div>
                 </div>
-              </div>
-              <div>
+              </div> -->
+            <!-- <div>
                 <div
                   class="flex justify-between text-xs text-purple-300/60 mb-1"
                 >
@@ -526,330 +455,264 @@
                 <div class="skill-bar-bg">
                   <div class="skill-bar-fill" data-w="78"></div>
                 </div>
+              </div> -->
+            <div>
+              <div class="flex justify-between text-xs text-purple-300/60 mb-1">
+                <span>Git / GitHub</span><span>30%</span>
               </div>
-              <div>
-                <div
-                  class="flex justify-between text-xs text-purple-300/60 mb-1"
-                >
-                  <span>Git / GitHub</span><span>94%</span>
-                </div>
-                <div class="skill-bar-bg">
-                  <div class="skill-bar-fill" data-w="94"></div>
-                </div>
+              <div class="skill-bar-bg">
+                <div class="skill-bar-fill" data-w="30"></div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <div class="divider my-2 relative z-10 max-w-5xl mx-auto"></div>
+  <div class="divider my-2 relative z-10 max-w-5xl mx-auto"></div>
 
-    <!-- ══════════════════════ PROJECTS ══════════════════════ -->
-    <section id="projects" class="py-24 px-6 relative z-10">
-      <div class="max-w-5xl mx-auto">
-        <div class="reveal text-center mb-16 space-y-3">
-          <p class="text-xs tracking-widest uppercase text-lilac-400/70">
-            03 — Projets
-          </p>
-          <h2 class="font-display text-5xl font-light">
-            Créations <em class="grad-text not-italic">récentes</em>
-          </h2>
-        </div>
-
-        <div class="grid md:grid-cols-2 gap-6">
-          <div
-            class="glass proj-card reveal p-8 md:col-span-2 flex flex-col md:flex-row gap-8 items-start"
-          >
-            <div class="flex-1 space-y-4">
-              <div class="flex items-center gap-3">
-                <span class="proj-tag">Featured</span>
-                <span class="proj-tag">Full-Stack</span>
-              </div>
-              <h3 class="font-display text-3xl font-light text-purple-100">
-                Lumina — Design System
-              </h3>
-              <p class="text-purple-300/60 leading-relaxed text-sm">
-                Un design system open-source construit avec React & Storybook.
-                80+ composants accessibles, thème dynamique et documentation
-                interactive. Utilisé par 12 équipes produit.
-              </p>
-              <div class="flex flex-wrap gap-2">
-                <span class="proj-tag">React</span>
-                <span class="proj-tag">Storybook</span>
-                <span class="proj-tag">Radix UI</span>
-                <span class="proj-tag">Chromatic</span>
-              </div>
-              <div class="flex gap-4 pt-2">
-                <a
-                  href="#"
-                  class="text-lilac-300 text-sm hover:text-white transition-colors flex items-center gap-1"
-                  >GitHub
-                  <svg
-                    class="w-3 h-3"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M7 17L17 7M7 7h10v10" /></svg
-                ></a>
-                <a
-                  href="#"
-                  class="text-lilac-300 text-sm hover:text-white transition-colors flex items-center gap-1"
-                  >Live demo
-                  <svg
-                    class="w-3 h-3"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M7 17L17 7M7 7h10v10" /></svg
-                ></a>
-              </div>
-            </div>
-            <div
-              class="w-full md:w-64 h-40 rounded-2xl flex items-center justify-center shrink-0 overflow-hidden"
-              style="
-                background: linear-gradient(
-                  135deg,
-                  rgba(136, 85, 255, 0.25) 0%,
-                  rgba(240, 168, 208, 0.15) 100%
-                );
-              "
-            >
-              <svg viewBox="0 0 200 120" class="w-48 opacity-70" fill="none">
-                <rect
-                  x="20"
-                  y="20"
-                  width="60"
-                  height="35"
-                  rx="8"
-                  fill="rgba(191,166,255,.3)"
-                  stroke="rgba(191,166,255,.5)"
-                  stroke-width="1"
-                />
-                <rect
-                  x="90"
-                  y="20"
-                  width="90"
-                  height="16"
-                  rx="4"
-                  fill="rgba(191,166,255,.2)"
-                  stroke="rgba(191,166,255,.3)"
-                  stroke-width="1"
-                />
-                <rect
-                  x="90"
-                  y="44"
-                  width="60"
-                  height="12"
-                  rx="4"
-                  fill="rgba(191,166,255,.15)"
-                />
-                <rect
-                  x="20"
-                  y="68"
-                  width="160"
-                  height="1"
-                  fill="rgba(191,166,255,.2)"
-                />
-                <rect
-                  x="20"
-                  y="80"
-                  width="40"
-                  height="22"
-                  rx="6"
-                  fill="rgba(136,85,255,.35)"
-                  stroke="rgba(136,85,255,.6)"
-                  stroke-width="1"
-                />
-                <rect
-                  x="70"
-                  y="80"
-                  width="40"
-                  height="22"
-                  rx="6"
-                  fill="rgba(191,166,255,.15)"
-                  stroke="rgba(191,166,255,.3)"
-                  stroke-width="1"
-                />
-                <circle
-                  cx="155"
-                  cy="91"
-                  r="11"
-                  fill="none"
-                  stroke="rgba(240,168,208,.5)"
-                  stroke-width="1.5"
-                />
-              </svg>
-            </div>
-          </div>
-
-          <div class="glass proj-card reveal p-7 space-y-4">
-            <div
-              class="w-full h-32 rounded-xl flex items-center justify-center overflow-hidden"
-              style="
-                background: linear-gradient(
-                  135deg,
-                  rgba(147, 197, 253, 0.15) 0%,
-                  rgba(136, 85, 255, 0.2) 100%
-                );
-              "
-            >
-              <svg viewBox="0 0 160 80" class="w-36 opacity-70" fill="none">
-                <rect
-                  x="10"
-                  y="10"
-                  width="140"
-                  height="60"
-                  rx="8"
-                  fill="none"
-                  stroke="rgba(147,197,253,.4)"
-                  stroke-width="1"
-                />
-                <polyline
-                  points="20,55 50,25 80,40 110,20 140,35"
-                  stroke="rgba(191,166,255,.8)"
-                  stroke-width="2"
-                  fill="none"
-                />
-                <circle cx="50" cy="25" r="3" fill="rgba(191,166,255,.9)" />
-                <circle cx="110" cy="20" r="3" fill="rgba(191,166,255,.9)" />
-              </svg>
-            </div>
-            <div class="flex gap-2 flex-wrap">
-              <span class="proj-tag">Next.js</span
-              ><span class="proj-tag">D3.js</span>
-            </div>
-            <h3 class="font-display text-2xl font-light text-purple-100">
-              DataFlow Analytics
-            </h3>
-            <p class="text-purple-300/60 text-sm leading-relaxed">
-              Dashboard d'analytics temps réel avec visualisations D3 et
-              WebSockets. Traite +50k événements/min.
-            </p>
-            <a
-              href="#"
-              class="text-lilac-300 text-sm hover:text-white transition-colors inline-flex items-center gap-1"
-              >Voir le projet →</a
-            >
-          </div>
-
-          <div class="glass proj-card reveal p-7 space-y-4">
-            <div
-              class="w-full h-32 rounded-xl flex items-center justify-center overflow-hidden"
-              style="
-                background: linear-gradient(
-                  135deg,
-                  rgba(240, 168, 208, 0.15) 0%,
-                  rgba(136, 85, 255, 0.2) 100%
-                );
-              "
-            >
-              <svg viewBox="0 0 160 80" class="w-36 opacity-70" fill="none">
-                <rect
-                  x="30"
-                  y="10"
-                  width="100"
-                  height="30"
-                  rx="15"
-                  fill="none"
-                  stroke="rgba(240,168,208,.5)"
-                  stroke-width="1.5"
-                />
-                <text
-                  x="80"
-                  y="30"
-                  text-anchor="middle"
-                  fill="rgba(240,168,208,.8)"
-                  font-size="12"
-                  font-family="serif"
-                >
-                  ✦ Luxe
-                </text>
-                <rect
-                  x="10"
-                  y="52"
-                  width="45"
-                  height="22"
-                  rx="6"
-                  fill="rgba(191,166,255,.2)"
-                  stroke="rgba(191,166,255,.35)"
-                  stroke-width="1"
-                />
-                <rect
-                  x="62"
-                  y="52"
-                  width="45"
-                  height="22"
-                  rx="6"
-                  fill="rgba(191,166,255,.2)"
-                  stroke="rgba(191,166,255,.35)"
-                  stroke-width="1"
-                />
-                <rect
-                  x="114"
-                  y="52"
-                  width="36"
-                  height="22"
-                  rx="6"
-                  fill="rgba(136,85,255,.3)"
-                  stroke="rgba(136,85,255,.5)"
-                  stroke-width="1"
-                />
-              </svg>
-            </div>
-            <div class="flex gap-2 flex-wrap">
-              <span class="proj-tag">React</span
-              ><span class="proj-tag">Stripe</span
-              ><span class="proj-tag">Node</span>
-            </div>
-            <h3 class="font-display text-2xl font-light text-purple-100">
-              Maison Céleste
-            </h3>
-            <p class="text-purple-300/60 text-sm leading-relaxed">
-              E-commerce luxe avec expérience immersive, animations 3D produit
-              et paiement Stripe intégré.
-            </p>
-            <a
-              href="#"
-              class="text-lilac-300 text-sm hover:text-white transition-colors inline-flex items-center gap-1"
-              >Voir le projet →</a
-            >
-          </div>
-        </div>
+  <!-- PROJECTS  -->
+  <section id="projects" class="py-24 px-6 relative z-10">
+    <div class="proj-box max-w-5xl mx-auto">
+      <div class="reveal-one text-center mb-16 space-y-3">
+        <p class="text-xs tracking-widest uppercase text-lilac-400/70">
+          03 — Projets
+        </p>
+        <h2 class="titles font-display text-5xl font-light">
+          Créations <em class="grad-text not-italic">récentes</em>
+        </h2>
       </div>
-    </section>
 
-    <div class="divider my-2 relative z-10 max-w-5xl mx-auto"></div>
 
-    <!-- ══════════════════════ EXPERIENCE ══════════════════════ -->
-    <section id="experience" class="py-24 px-6 relative z-10">
-      <div class="max-w-5xl mx-auto">
-        <div class="reveal text-center mb-16 space-y-3">
-          <p class="text-xs tracking-widest uppercase text-lilac-400/70">
-            04 — Parcours
-          </p>
-          <h2 class="font-display text-5xl font-light">
-            Expérience &<br /><em class="grad-text not-italic">Formation</em>
-          </h2>
+      <div class="grid md:grid-cols-2 gap-6 justify-items-center ">
+
+        <!-- 1. EDUVERSE (Featured - Pleine largeur) -->
+        <div class="glass proj-card reveal p-8 md:col-span-2 flex flex-col md:flex-row gap-8 items-start w-full">
+          <div class="flex-1 space-y-4">
+            <div class="flex items-center gap-3">
+              <span class="proj-tag">Featured</span>
+              <span class="proj-tag">Collaboratif</span>
+            </div>
+            <h3 class="font-display text-3xl font-light text-purple-100">
+              EDUVERSE
+            </h3>
+            <p class="text-purple-300/60 leading-relaxed text-sm">
+              Plateforme collaborative conçue pour répondre aux besoins essentiels des établissements scolaires (basée
+              sur RosarioSIS).
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="proj-tag">PHP</span>
+              <span class="proj-tag">MySQL</span>
+              <span class="proj-tag">Git & GitHub</span>
+            </div>
+            <div class="flex gap-4 pt-2 relative z-20">
+              <a href="https://github.com/FeliOBS2005/eduverse" target="_blank" rel="noopener noreferrer"
+                class="text-lilac-300 text-sm hover:text-white transition-colors flex items-center gap-1 cursor-pointer">
+                GitHub
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path d="M7 17L17 7M7 7h10v10" />
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="w-full md:w-64 h-40 rounded-2xl flex items-center justify-center shrink-0 overflow-hidden"
+            style="background: linear-gradient(135deg, rgba(136, 85, 255, 0.25) 0%, rgba(240, 168, 208, 0.15) 100%);">
+            <span class="text-purple-200/70 font-display text-lg">EDUVERSE</span>
+          </div>
         </div>
 
-        <div class="grid md:grid-cols-2 gap-12">
-          <div class="space-y-1">
-            <h3
-              class="text-xs tracking-widest uppercase text-lilac-400/70 mb-8"
-            >
-              Expérience pro
-            </h3>
-            <div class="relative pl-8">
-              <div
-                class="timeline-line absolute left-0.75 top-0 bottom-0"
-              ></div>
-              <div class="space-y-10">
-                <div class="reveal relative">
+        <!-- 2. EvenSpace -->
+        <div class="glass proj-card reveal p-7 space-y-4 w-full max-w-[400px] md:max-w-full">
+          <div class="w-full h-32 rounded-xl flex items-center justify-center overflow-hidden"
+            style="background: linear-gradient(135deg, rgba(147, 197, 253, 0.15) 0%, rgba(136, 85, 255, 0.2) 100%);">
+            <span class="text-purple-200/70 font-display text-base">EvenSpace-242</span>
+          </div>
+          <div class="flex gap-2 flex-wrap">
+            <span class="proj-tag">PHP</span>
+            <span class="proj-tag">MySQL</span>
+          </div>
+          <h3 class="font-display text-2xl font-light text-purple-100">
+            EvenSpace-242
+          </h3>
+          <p class="text-purple-300/60 text-sm leading-relaxed">
+            Application web de centralisation et de gestion des réservations d'espaces d'événements à Brazzaville.
+          </p>
+          <div class="relative z-20 pt-2">
+            <a href="https://github.com/FeliOBS2005/eventspace-242" target="_blank" rel="noopener noreferrer"
+              class="text-lilac-300 text-sm hover:text-white transition-colors inline-flex items-center gap-1 cursor-pointer">Voir
+              sur GitHub →</a>
+          </div>
+        </div>
+
+        <!-- 3. Livre d'or -->
+        <div class="glass proj-card reveal p-7 space-y-4 w-full max-w-[400px] md:max-w-full">
+          <div class="w-full h-32 rounded-xl flex items-center justify-center overflow-hidden"
+            style="background: linear-gradient(135deg, rgba(240, 168, 208, 0.15) 0%, rgba(136, 85, 255, 0.2) 100%);">
+            <span class="text-purple-200/70 font-display text-base">Livre d'or</span>
+          </div>
+          <div class="flex gap-2 flex-wrap">
+            <span class="proj-tag">PHP</span>
+            <span class="proj-tag">MySQL</span>
+            <span class="proj-tag">QR Code</span>
+          </div>
+          <h3 class="font-display text-2xl font-light text-purple-100">
+            Livre d'Or Numérique
+          </h3>
+          <p class="text-purple-300/60 text-sm leading-relaxed">
+            Application web interactive permettant aux invités de laisser des messages et témoignages via un scan de
+            code QR.
+          </p>
+          <div class="relative z-20 pt-2">
+            <a href="https://github.com/FeliOBS2005/livreor" target="_blank" rel="noopener noreferrer"
+              class="text-lilac-300 text-sm hover:text-white transition-colors inline-flex items-center gap-1 cursor-pointer">Voir
+              sur GitHub →</a>
+          </div>
+        </div>
+
+        <!-- 4. Site Hôtel -->
+        <div class="glass proj-card reveal p-7 space-y-4 w-full max-w-[400px] md:max-w-full">
+          <div class="w-full h-32 rounded-xl flex items-center justify-center overflow-hidden"
+            style="background: linear-gradient(135deg, rgba(136, 85, 255, 0.2) 0%, rgba(147, 197, 253, 0.15) 100%);">
+            <span class="text-purple-200/70 font-display text-base">Site_hotel</span>
+          </div>
+          <div class="flex gap-2 flex-wrap">
+            <span class="proj-tag">HTML5</span>
+            <span class="proj-tag">CSS3</span>
+          </div>
+          <h3 class="font-display text-2xl font-light text-purple-100">
+            Site Web Hôtel
+          </h3>
+          <p class="text-purple-300/60 text-sm leading-relaxed">
+            Intégration d'un site web élégant et responsive pour la présentation et la réservation de chambres d'hôtel.
+          </p>
+          <div class="relative z-20 pt-2">
+            <a href="https://github.com/FeliOBS2005/Site_hotel" target="_blank" rel="noopener noreferrer"
+              class="text-lilac-300 text-sm hover:text-white transition-colors inline-flex items-center gap-1 cursor-pointer">Voir
+              sur GitHub →</a>
+          </div>
+        </div>
+
+        <!-- 5. E-commerce -->
+        <div class="glass proj-card reveal p-7 space-y-4 w-full max-w-[400px] md:max-w-full">
+          <div class="w-full h-32 rounded-xl flex items-center justify-center overflow-hidden"
+            style="background: linear-gradient(135deg, rgba(240, 168, 208, 0.2) 0%, rgba(136, 85, 255, 0.15) 100%);">
+            <span class="text-purple-200/70 font-display text-base">E-commerce</span>
+          </div>
+          <div class="flex gap-2 flex-wrap">
+            <span class="proj-tag">JavaScript</span>
+            <span class="proj-tag">HTML/CSS</span>
+          </div>
+          <h3 class="font-display text-2xl font-light text-purple-100">
+            Boutique E-commerce
+          </h3>
+          <p class="text-purple-300/60 text-sm leading-relaxed">
+            Interface de commerce électronique interactive gérant le catalogue produits et le panier d'achat.
+          </p>
+          <div class="relative z-20 pt-2">
+            <a href="https://github.com/FeliOBS2005/E-commerce" target="_blank" rel="noopener noreferrer"
+              class="text-lilac-300 text-sm hover:text-white transition-colors inline-flex items-center gap-1 cursor-pointer">Voir
+              sur GitHub →</a>
+          </div>
+        </div>
+
+        <!-- 6. Novalist (TodoList Laravel) -->
+        <div class="glass proj-card reveal p-7 space-y-4 w-full max-w-[400px] md:max-w-full">
+          <div class="w-full h-32 rounded-xl flex items-center justify-center overflow-hidden"
+            style="background: linear-gradient(135deg, rgba(147, 197, 253, 0.15) 0%, rgba(136, 85, 255, 0.2) 100%);">
+            <span class="text-purple-200/70 font-display text-base">Novalist</span>
+          </div>
+          <div class="flex gap-2 flex-wrap">
+            <span class="proj-tag">Laravel</span>
+            <span class="proj-tag">Tailwind CSS</span>
+          </div>
+          <h3 class="font-display text-2xl font-light text-purple-100">
+            Novalist (TodoList Laravel)
+          </h3>
+          <p class="text-purple-300/60 text-sm leading-relaxed">
+            Application web de gestion de tâches et de suivi de productivité avec un design moderne et épuré.
+          </p>
+          <div class="relative z-20 pt-2">
+            <a href="https://github.com/FeliOBS2005/todoList-Laravel" target="_blank" rel="noopener noreferrer"
+              class="text-lilac-300 text-sm hover:text-white transition-colors inline-flex items-center gap-1 cursor-pointer">Voir
+              sur GitHub →</a>
+          </div>
+        </div>
+
+        <!-- 7. Todo App Next & API -->
+        <div class="glass proj-card reveal p-7 space-y-4 w-full max-w-[400px] md:max-w-full">
+          <div class="w-full h-32 rounded-xl flex items-center justify-center overflow-hidden"
+            style="background: linear-gradient(135deg, rgba(136, 85, 255, 0.2) 0%, rgba(240, 168, 208, 0.15) 100%);">
+            <span class="text-purple-200/70 font-display text-base">Todo Apps</span>
+          </div>
+          <div class="flex gap-2 flex-wrap">
+            <span class="proj-tag">Next.js / Blade</span>
+            <span class="proj-tag">API REST</span>
+          </div>
+          <h3 class="font-display text-2xl font-light text-purple-100">
+            Todo Apps & API
+          </h3>
+          <p class="text-purple-300/60 text-sm leading-relaxed">
+            Développement d'applications de gestion de tâches connectées à des API (Next.js et Laravel Blade).
+          </p>
+          <div class="relative z-20 pt-2">
+            <a href="https://github.com/FeliOBS2005/todo-app-api" target="_blank" rel="noopener noreferrer"
+              class="text-lilac-300 text-sm hover:text-white transition-colors inline-flex items-center gap-1 cursor-pointer">Voir
+              sur GitHub →</a>
+          </div>
+        </div>
+
+        <!-- 8. Portfolio Personnel -->
+        <div class="glass proj-card reveal p-7 space-y-4 w-full max-w-[400px] md:max-w-full">
+          <div class="w-full h-32 rounded-xl flex items-center justify-center overflow-hidden"
+            style="background: linear-gradient(135deg, rgba(240, 168, 208, 0.2) 0%, rgba(136, 85, 255, 0.15) 100%);">
+            <span class="text-purple-200/70 font-display text-base">Portfolio</span>
+          </div>
+          <div class="flex gap-2 flex-wrap">
+            <span class="proj-tag">HTML5 / CSS</span>
+            <span class="proj-tag">Tailwind CSS</span>
+          </div>
+          <h3 class="font-display text-2xl font-light text-purple-100">
+            Portfolio Personnel
+          </h3>
+          <p class="text-purple-300/60 text-sm leading-relaxed">
+            Site portfolio interactif et moderne mettant en valeur mon parcours et mes compétences de développeuse.
+          </p>
+          <div class="relative z-20 pt-2">
+            <a href="https://github.com/FeliOBS2005/portfolio_perso" target="_blank" rel="noopener noreferrer"
+              class="text-lilac-300 text-sm hover:text-white transition-colors inline-flex items-center gap-1 cursor-pointer">Voir
+              sur GitHub →
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="divider my-2 relative z-10 max-w-5xl mx-auto"></div>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="py-24 px-6 relative z-10">
+    <div class="proj-box max-w-5xl mx-auto">
+      <div class="reveal-one text-center mb-16 space-y-3">
+        <p class="text-xs tracking-widest uppercase text-lilac-400/70">
+          04 — Parcours
+        </p>
+        <h2 class="titles font-display text-5xl font-light">
+          Expérience &<br /><em class="grad-text not-italic">Formation</em>
+        </h2>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-12">
+        <div class="space-y-1">
+          <h3 class="text-xs tracking-widest uppercase text-lilac-400/70 mb-8">
+            Expérience pro
+          </h3>
+          <div class="relative pl-8">
+            <div class="timeline-line absolute left-0.75 top-0 bottom-0"></div>
+            <div class="space-y-10">
+              <!-- <div class="reveal relative">
                   <div class="timeline-dot absolute -left-6.5 top-1"></div>
                   <div class="glass p-5 space-y-2">
                     <div
@@ -871,8 +734,8 @@
                       complète du produit SaaS, -60% temps de chargement.
                     </p>
                   </div>
-                </div>
-                <div class="reveal relative">
+                </div> -->
+              <!-- <div class="reveal relative">
                   <div class="timeline-dot absolute -left-6.5 top-1"></div>
                   <div class="glass p-5 space-y-2">
                     <div
@@ -892,92 +755,73 @@
                       Stack React + Node.js + PostgreSQL.
                     </p>
                   </div>
-                </div>
-                <div class="reveal relative">
-                  <div class="timeline-dot absolute -left-6.5 top-1"></div>
-                  <div class="glass p-5 space-y-2">
-                    <div
-                      class="flex justify-between items-start flex-wrap gap-1"
-                    >
-                      <h4 class="font-medium text-purple-100 text-sm">
-                        Dev Frontend Junior
-                      </h4>
-                      <span
-                        class="text-xs text-lilac-400/60 bg-lilac-500/10 px-2 py-0.5 rounded-full"
-                        >2019 – 2021</span
-                      >
-                    </div>
-                    <p class="text-xs text-purple-400/60">
-                      Agence Lumis — Lyon
-                    </p>
-                    <p class="text-xs text-purple-300/50 leading-relaxed">
-                      Intégration de sites WordPress sur-mesure, animations
-                      GSAP, optimisations Core Web Vitals.
-                    </p>
+                </div> -->
+              <div class="reveal relative">
+                <div class="timeline-dot absolute -left-6.5 top-1"></div>
+                <div class="glass p-5 space-y-2">
+                  <div class="flex justify-between items-start flex-wrap gap-1">
+                    <h4 class="font-medium text-purple-100 text-sm">
+                      Dev Frontend Junior en stage
+                    </h4>
+                    <span class="text-xs text-lilac-400/60 bg-lilac-500/10 px-2 py-0.5 rounded-full">Aout - Octobre
+                      2026</span>
                   </div>
+                  <p class="text-xs text-purple-400/60">
+                    Agence WEBTINIX - Brazzaville
+                  </p>
+                  <p class="text-xs text-purple-300/50 leading-relaxed">
+                    Stage de développement fullStack, participation à la maintenance et à l'amélioration
+                    de sites et projets client sur Prestashop et Eduverse.
+                  </p>
                 </div>
               </div>
             </div>
           </div>
+        </div>
 
-          <div class="space-y-1">
-            <h3
-              class="text-xs tracking-widest uppercase text-lilac-400/70 mb-8"
-            >
-              Formation
-            </h3>
-            <div class="relative pl-8">
-              <div
-                class="timeline-line absolute left-0.75 top-0 bottom-0"
-              ></div>
-              <div class="space-y-10">
-                <div class="reveal relative">
-                  <div class="timeline-dot absolute -left-6.5 top-1"></div>
-                  <div class="glass p-5 space-y-2">
-                    <div
-                      class="flex justify-between items-start flex-wrap gap-1"
-                    >
-                      <h4 class="font-medium text-purple-100 text-sm">
-                        Master Informatique
-                      </h4>
-                      <span
-                        class="text-xs text-lilac-400/60 bg-lilac-500/10 px-2 py-0.5 rounded-full"
-                        >2017 – 2019</span
-                      >
-                    </div>
-                    <p class="text-xs text-purple-400/60">
-                      INSA Lyon — Génie Logiciel
-                    </p>
-                    <p class="text-xs text-purple-300/50 leading-relaxed">
-                      Spécialisation en architecture logicielle, systèmes
-                      distribués et IHM. Mention Très Bien.
-                    </p>
+        <div class="space-y-1">
+          <h3 class="text-xs tracking-widest uppercase text-lilac-400/70 mb-8">
+            Formation
+          </h3>
+          <div class="relative pl-8">
+            <div class="timeline-line absolute left-0.75 top-0 bottom-0"></div>
+            <div class="space-y-10">
+              <div class="reveal relative">
+                <div class="timeline-dot absolute -left-6.5 top-1"></div>
+                <div class="glass p-5 space-y-2">
+                  <div class="flex justify-between items-start flex-wrap gap-1">
+                    <h4 class="font-medium text-purple-100 text-sm">
+                      Licence en cours en analyse et programmmation
+                    </h4>
+                    <span class="text-xs text-lilac-400/60 bg-lilac-500/10 px-2 py-0.5 rounded-full">2023 – 2026</span>
                   </div>
+                  <p class="text-xs text-purple-400/60">
+                    Institut d'Enseignement Professionnel Appliqué (IEPA) — Brazzaville
+                  </p>
+                  <p class="text-xs text-purple-300/50 leading-relaxed">
+                    Formation en cours pour approfondir mes compétences en
+                    développement logiciel et en programmation.
                 </div>
-                <div class="reveal relative">
-                  <div class="timeline-dot absolute -left-6.5 top-1"></div>
-                  <div class="glass p-5 space-y-2">
-                    <div
-                      class="flex justify-between items-start flex-wrap gap-1"
-                    >
-                      <h4 class="font-medium text-purple-100 text-sm">
-                        Licence Mathématiques / Info
-                      </h4>
-                      <span
-                        class="text-xs text-lilac-400/60 bg-lilac-500/10 px-2 py-0.5 rounded-full"
-                        >2014 – 2017</span
-                      >
-                    </div>
-                    <p class="text-xs text-purple-400/60">
-                      Université Paris-Saclay
-                    </p>
-                    <p class="text-xs text-purple-300/50 leading-relaxed">
-                      Bases solides en algorithmique, structures de données et
-                      développement web fondamental.
-                    </p>
+              </div>
+              <div class="reveal relative">
+                <div class="timeline-dot absolute -left-6.5 top-1"></div>
+                <div class="glass p-5 space-y-2">
+                  <div class="flex justify-between items-start flex-wrap gap-1">
+                    <h4 class="font-medium text-purple-100 text-sm">
+                      Baccalauréat série D, mention Assez-bien- Lycée
+                      Thomas Sankara B
+                    </h4>
+                    <span class="text-xs text-lilac-400/60 bg-lilac-500/10 px-2 py-0.5 rounded-full">2022 – 2023</span>
                   </div>
+                  <p class="text-xs text-purple-400/60">
+                    Lycée Thomas Sankara — Brazzaville
+                  </p>
+                  <p class="text-xs text-purple-300/50 leading-relaxed">
+                    Obtention du baccalauréat série D avec mention Assez-bien,
+                  </p>
                 </div>
-                <div class="reveal relative">
+              </div>
+              <!-- <div class="reveal relative">
                   <div class="timeline-dot absolute -left-6.5 top-1"></div>
                   <div class="glass p-5 space-y-2">
                     <div
@@ -999,125 +843,97 @@
                       numérique.
                     </p>
                   </div>
-                </div>
-              </div>
+                </div> -->
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <div class="divider my-2 relative z-10 max-w-5xl mx-auto"></div>
+  <div class="divider my-2 relative z-10 max-w-5xl mx-auto"></div>
 
-    <!-- ══════════════════════ CONTACT ══════════════════════ -->
-    <section id="contact" class="py-24 px-6 relative z-10">
-      <div class="max-w-3xl mx-auto">
-        <div class="reveal text-center mb-16 space-y-3">
-          <p class="text-xs tracking-widest uppercase text-lilac-400/70">
-            05 — Contact
-          </p>
-          <h2 class="font-display text-5xl font-light">
-            Travaillons<br /><em class="grad-text not-italic">ensemble</em>
-          </h2>
-          <p class="text-purple-300/60 text-sm max-w-sm mx-auto">
-            Un projet, une collaboration ou simplement envie d'échanger ? Je
-            suis disponible et impatiente d'en apprendre davantage.
-          </p>
-        </div>
-
-        <div class="glass reveal p-8 md:p-12 space-y-6">
-          <div class="grid md:grid-cols-2 gap-5">
-            <div class="space-y-2">
-              <label class="text-xs text-purple-400/60 tracking-wide"
-                >Prénom & Nom</label
-              >
-              <input
-                type="text"
-                placeholder="Marie Dupont"
-                class="input-glass"
-              />
-            </div>
-            <div class="space-y-2">
-              <label class="text-xs text-purple-400/60 tracking-wide"
-                >Email</label
-              >
-              <input
-                type="email"
-                placeholder="marie@example.com"
-                class="input-glass"
-              />
-            </div>
-          </div>
-          <div class="space-y-2">
-            <label class="text-xs text-purple-400/60 tracking-wide"
-              >Sujet</label
-            >
-            <input
-              type="text"
-              placeholder="Projet freelance, collaboration..."
-              class="input-glass"
-            />
-          </div>
-          <div class="space-y-2">
-            <label class="text-xs text-purple-400/60 tracking-wide"
-              >Message</label
-            >
-            <textarea
-              rows="5"
-              placeholder="Décrivez votre projet..."
-              class="input-glass resize-none"
-            ></textarea>
-          </div>
-          <div class="flex justify-end">
-            <button class="btn-primary">
-              Envoyer le message
-              <svg
-                class="w-4 h-4"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                viewBox="0 0 24 24"
-              >
-                <path d="M5 12h14M12 5l7 7-7 7" />
-              </svg>
-            </button>
-          </div>
-        </div>
-
-        <div class="grid grid-cols-3 gap-4 mt-6">
-          <div class="glass reveal p-4 text-center space-y-1">
-            <p class="text-lg">✉️</p>
-            <p class="text-xs text-purple-400/60">elara@dev.fr</p>
-          </div>
-          <div class="glass reveal p-4 text-center space-y-1">
-            <p class="text-lg">📍</p>
-            <p class="text-xs text-purple-400/60">Paris, France</p>
-          </div>
-          <div class="glass reveal p-4 text-center space-y-1">
-            <p class="text-lg">💬</p>
-            <p class="text-xs text-purple-400/60">Réponse sous 24h</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ══════════════════════ FOOTER ══════════════════════ -->
-    <footer class="relative z-10 border-t border-purple-900/30 py-8 px-6">
-      <div
-        class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4"
-      >
-        <span class="font-display text-xl grad-text">Élara Moreau</span>
-        <p class="text-xs text-purple-400/40">
-          © 2025 — Conçu & développé avec ♡
+  <section id="contact" class="py-24 px-6 relative z-10 flex flex-col items-center justify-center">
+    <div class="max-w-4xl w-full mx-auto flex flex-col items-center">
+      <div class="reveal-one text-center mb-16 space-y-4">
+        <p class="text-xs tracking-widest uppercase text-purple-400/70">
+          05 — Contact
         </p>
-        <div class="flex gap-5 text-xs text-purple-400/40">
-          <a href="#" class="hover:text-lilac-300 transition-colors">GitHub</a>
-          <a href="#" class="hover:text-lilac-300 transition-colors"
-            >LinkedIn</a
-          >
-          <a href="#" class="hover:text-lilac-300 transition-colors">CV</a>
+        <h2 class="titles font-display text-5xl md:text-6xl font-light leading-tight">
+          Travaillons<br /><em class="grad-text not-italic">ensemble</em>
+        </h2>
+        <p class="text-purple-300/60 text-sm max-w-sm mx-auto">
+          Un projet, une collaboration ou simplement envie d'échanger ? Je
+          suis disponible et impatiente d'en apprendre davantage.
+        </p>
+      </div>
+
+      <!-- Formulaire -->
+      <div class="w-full glassy reveal p-8 md:p-12 space-y-6">
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="space-y-2">
+            <label class="text-xs text-purple-400/60 tracking-wide uppercase font-medium">Prénom & Nom</label>
+            <input type="text" placeholder="Jahniss Félijo" class="input-glass w-full" />
+          </div>
+          <div class="space-y-2">
+            <label class="text-xs text-purple-400/60 tracking-wide uppercase font-medium">Email</label>
+            <input type="email" placeholder="jah@gmail.com" class="input-glass w-full" />
+          </div>
+        </div>
+
+        <div class="space-y-2">
+          <label class="text-xs text-purple-400/60 tracking-wide uppercase font-medium">Sujet</label>
+          <input type="text" placeholder="Stage, projet freelance, collaboration..." class="input-glass w-full" />
+        </div>
+
+        <div class="space-y-2">
+          <label class="text-xs text-purple-400/60 tracking-wide uppercase font-medium">Message</label>
+          <textarea rows="5" placeholder="Décrivez votre projet ou votre message..."
+            class="input-glass w-full resize-none"></textarea>
+        </div>
+
+        <div class="flex justify-center pt-2">
+          <button class="btn-primary w-full md:w-auto px-10 py-4 flex items-center justify-center gap-2 cursor-pointer">
+            Envoyer le message
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </button>
         </div>
       </div>
-    </footer>
-  </body>
+
+      <!-- 3 blocs d'information parfaitement centrés et alignés -->
+      <div class="w-full grid grid-cols-1 md:grid-cols-3 gap-6 mt-6 justify-items-center">
+        <div class="glassy reveal p-6 text-center space-y-2 flex flex-col items-center justify-center w-full">
+          <span class="text-2xl">.</span>
+          <p class="text-xs text-purple-300 font-medium break-all">jahnissfelijoobenda@gmail.com</p>
+        </div>
+        <div class="glassy reveal p-6 text-center space-y-2 flex flex-col items-center justify-center w-full">
+          <span class="text-2xl">.</span>
+          <p class="text-xs text-purple-300 font-medium">Brazzaville, Congo</p>
+        </div>
+        <div class="glassy reveal p-6 text-center space-y-2 flex flex-col items-center justify-center w-full">
+          <span class="text-2xl">.</span>
+          <p class="text-xs text-purple-300 font-medium">Ecrivez-nous</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--FOOTER  -->
+  <footer class="relative z-10 border-t border-purple-900/30 py-8 px-6">
+    <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+      <span class="font-display text-xl grad-text"> Jahniss Félijo OBENDA</span>
+      <p class="text-xs text-purple-400/40">
+        © 2025 — Conçu & développé par féli obs. Tous droits réservés.
+      </p>
+      <div class="flex gap-5 text-xs text-purple-400/40">
+        <a href="#" class="hover:text-lilac-300 transition-colors">GitHub</a>
+        <a href="#" class="hover:text-lilac-300 transition-colors">CV</a>
+      </div>
+    </div>
+  </footer>
+  <script type="module" src="/src/main.js"></script>
+</body>
+
 </html>
